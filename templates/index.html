@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mooviego</title>
+
+    <!--style here-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" async>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+    <h1>Mooviego</h1>
+    <form action="/result" method="POST">
+        <input type="text" placeholder="search for movie" name="user-movie">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+<hr>
+    <div class="result-display-area">
+        <img src="{{ movie_imageSrc }}">
+        <h3>{{ movie_title }}</h3>
+        <h5>{{ movie_subtitle }}</h5>
+        <p>{{ movie_summary }}</p>
+        <p>{{ movie_opening_date }}</p>
+        <p>{{ movie_ratedPG }}</p>
+        <a href="{{ movie_reviewlink }}" target="_blank">{{ article_link }}</a>
+    </div>
+
+    <script src="/static/script.js" async></script>
+</body>
+</html>
